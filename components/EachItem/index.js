@@ -8,7 +8,7 @@ const EachHistoryItem = props => {
     deleteHistory(id)
   }
   return (
-    <li className="listItem">
+    <li id={id + 1} className="listItem">
       <div className="listItemContainer">
         <p className="timeCSS">{timeAccessed}</p>
         <div className="imageTitleUrlContainer">
