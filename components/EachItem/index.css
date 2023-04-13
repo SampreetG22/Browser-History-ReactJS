@@ -1,0 +1,50 @@
+.listItem {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+.listItemContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: 'Roboto';
+}
+.timeCSS {
+  font-size: 12px;
+  font-weight: 400;
+  width: 10%;
+}
+.imageTitleUrlContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 30%;
+  align-items: center;
+  flex-grow: 1;
+}
+.logoAlter {
+  width: 15px;
+  height: 15px;
+  margin-right: 13px;
+}
+.titleCSS {
+  font-size: 13px;
+  font-weight: 400;
+  margin-right: 15px;
+}
+.urlCSS {
+  font-size: 13px;
+  margin-right: 15px;
+  color: #475569;
+}
+.deleteBtn {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.deleteCSS {
+  width: 15px;
+  height: 15px;
+  justify-self: flex-end;
+  margin-right: 7px;
+}
