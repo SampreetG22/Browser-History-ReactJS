@@ -13,6 +13,7 @@
   font-size: 12px;
   font-weight: 400;
   width: 10%;
+  margin-left: 10px;
 }
 .imageTitleUrlContainer {
   display: flex;
