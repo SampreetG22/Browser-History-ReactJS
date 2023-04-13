@@ -86,7 +86,7 @@ class BrowserHistory extends Component {
 
   deleteHistory = id => {
     const {historyList} = this.state
-    const {newList} = historyList.filter(eachHist => eachHist.id !== id)
+    const newList = historyList.filter(eachHist => eachHist.id !== id)
     this.setState({historyList: newList})
   }
 
@@ -95,8 +95,37 @@ class BrowserHistory extends Component {
     const filteredList = historyList.filter(each =>
       each.title.toLowerCase().includes(searchInput.toLowerCase()),
     )
+    if (filteredList.length === 0) {
+      return (
+        <>
+          <div className="mainContainer">
+            <img
+              src="https://assets.ccbp.in/frontend/react-js/history-website-logo-img.png"
+              alt="app logo"
+              className="historyLogo"
+            />
+            <div className="searchAndInputContainer">
+              <img
+                src="https://assets.ccbp.in/frontend/react-js/search-img.png"
+                alt="search"
+                className="searchLogo"
+              />
+              <input
+                type="search"
+                className="inputBox"
+                placeholder="Search History"
+                onChange={this.inputChanged}
+              />
+            </div>
+          </div>
+          <div className="emptyHistoryContainer">
+            <p className="emptyHistory">There is no history to show</p>
+          </div>
+        </>
+      )
+    }
     return (
-      <div>
+      <>
         <div className="mainContainer">
           <img
             src="https://assets.ccbp.in/frontend/react-js/history-website-logo-img.png"
@@ -130,7 +159,7 @@ class BrowserHistory extends Component {
             </ul>
           </div>
         </div>
-      </div>
+      </>
     )
   }
 }
