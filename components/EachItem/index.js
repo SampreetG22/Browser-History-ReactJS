@@ -8,15 +8,20 @@ const EachHistoryItem = props => {
     deleteHistory(id)
   }
   return (
-    <li id={id} className="listItem">
+    <li className="listItem">
       <div className="listItemContainer">
         <p className="timeCSS">{timeAccessed}</p>
         <div className="imageTitleUrlContainer">
-          <img src={logoUrl} alt="instagram" className="logoAlter" />
+          <img src={logoUrl} alt="domain logo" className="logoAlter" />
           <p className="titleCSS">{title}</p>
           <p className="urlCSS">{domainUrl}</p>
         </div>
-        <button onClick={onDeleteClick} type="button" className="deleteBtn">
+        <button
+          onClick={onDeleteClick}
+          type="button"
+          className="deleteBtn"
+          data-testid="delete"
+        >
           <img
             src="https://assets.ccbp.in/frontend/react-js/delete-img.png"
             alt="delete"
